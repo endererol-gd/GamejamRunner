@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GamejamRunner.unity
+    guid: 5e6f1214dd366bf4bbcc401400e573ce
   m_configObjects: {}
