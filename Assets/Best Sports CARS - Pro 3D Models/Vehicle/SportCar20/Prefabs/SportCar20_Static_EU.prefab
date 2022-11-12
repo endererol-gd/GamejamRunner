@@ -244,8 +244,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4539661262775328}
-  - component: {fileID: 205659240027242542}
   - component: {fileID: 335152681}
+  - component: {fileID: 335152674}
   m_Layer: 0
   m_Name: SportCar20_Static_EU
   m_TagString: Untagged
@@ -271,73 +271,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &205659240027242542
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094918606176732}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.000000059604645, y: 0.67349434, z: 0.014411569}
-  m_Size: 4.308175
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.734836
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23701083377294330}
-    - renderer: {fileID: 23639704668818948}
-    - renderer: {fileID: 23602508307043518}
-    - renderer: {fileID: 23352517515280102}
-    - renderer: {fileID: 23933815877716664}
-    - renderer: {fileID: 137702831249454340}
-    - renderer: {fileID: 23290931836634726}
-    - renderer: {fileID: 23027780402154528}
-    - renderer: {fileID: 23249710211269748}
-    - renderer: {fileID: 23923832077909064}
-    - renderer: {fileID: 23398363996031340}
-    - renderer: {fileID: 23329972007089818}
-    - renderer: {fileID: 23261772062777970}
-    - renderer: {fileID: 23969119238499858}
-  - screenRelativeHeight: 0.18900658
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23040785034724546}
-    - renderer: {fileID: 23315676516460282}
-    - renderer: {fileID: 23504703434565340}
-    - renderer: {fileID: 23305346951118288}
-    - renderer: {fileID: 23697571034407942}
-    - renderer: {fileID: 23723781586018226}
-    - renderer: {fileID: 23867781325164154}
-    - renderer: {fileID: 23371398227637772}
-    - renderer: {fileID: 23570809490582388}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 137068345514806764}
-    - renderer: {fileID: 23079380483268036}
-    - renderer: {fileID: 23527597950246282}
-    - renderer: {fileID: 23968746014619994}
-    - renderer: {fileID: 23746802151329612}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23694196845758860}
-    - renderer: {fileID: 23201470735021528}
-    - renderer: {fileID: 23089202093778810}
-    - renderer: {fileID: 23250967657797254}
-    - renderer: {fileID: 23019493518771794}
-    - renderer: {fileID: 23015429612345316}
-    - renderer: {fileID: 23478775252932048}
-    - renderer: {fileID: 23154478520416466}
-    - renderer: {fileID: 23852738686233020}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 23754029509431940}
-    - renderer: {fileID: 23032539178138860}
-    - renderer: {fileID: 23094616988679154}
-    - renderer: {fileID: 23820696818133010}
-  m_Enabled: 1
 --- !u!54 &335152681
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -354,6 +287,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &335152674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094918606176732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d48b0911e63314184e3b1f9d24535a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carSpeed: 50
+  _maxSpeed: 90
+  steerAngle: 20
+  _rotationSpeed: 200
+  _carTraction: 1
 --- !u!1 &1105226973929536
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +657,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528705317170986}
-  - component: {fileID: 335152686}
   m_Layer: 0
   m_Name: SportCar20_WheelRearRight
   m_TagString: Untagged
@@ -732,36 +681,6 @@ Transform:
   m_Father: {fileID: 4783930979861612}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &335152686
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183162418364304}
-  m_Center: {x: 0.12, y: 0.12, z: -0.01}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_Enabled: 1
 --- !u!1 &1191042915313388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,7 +1335,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4213232195254230}
-  - component: {fileID: 335152688}
   m_Layer: 0
   m_Name: SportCar20_WheelFrontRight
   m_TagString: Untagged
@@ -1441,36 +1359,6 @@ Transform:
   m_Father: {fileID: 4783930979861612}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &335152688
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288719004185982}
-  m_Center: {x: 0, y: 0.15, z: -0.02}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_Enabled: 1
 --- !u!1 &1306715505234210
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,7 +4012,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4637906005512360}
-  - component: {fileID: 335152687}
   m_Layer: 0
   m_Name: SportCar20_WheelRearLeft
   m_TagString: Untagged
@@ -4149,36 +4036,6 @@ Transform:
   m_Father: {fileID: 4783930979861612}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &335152687
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785908448937766}
-  m_Center: {x: 0, y: 0.15, z: -0.02}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_Enabled: 1
 --- !u!1 &1801147999074860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,7 +4815,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4463383102714782}
-  - component: {fileID: 335152682}
   m_Layer: 0
   m_Name: SportCar20_WheelFrontLeft
   m_TagString: Untagged
@@ -4983,36 +4839,6 @@ Transform:
   m_Father: {fileID: 4783930979861612}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &335152682
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890649546845854}
-  m_Center: {x: 0, y: 0.17, z: -0.02}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_Enabled: 1
 --- !u!1 &1896855628345042
 GameObject:
   m_ObjectHideFlags: 0
